@@ -41,8 +41,8 @@ const Item = ({ editingTaskId,
                             type="checkbox"
                             id={`defaultCheck${ele.id}`}
                         />
-                        <label className="form-check-label mb-2 " htmlFor={`defaultCheck${ele.id}`}>
-                            <h6>{ele.completed ? <del>{ele.text}</del> : <>{ele.text}</>}</h6>
+                        <label className="form-check-label mb-2 font-weight-bold card-text" htmlFor={`defaultCheck${ele.id}`}>
+                            {ele.completed ? <del>{ele.text}</del> : <>{ele.text}</>}
                         </label>
                         <br />
                         <button className="btn btn-danger" onClick={() => handleDelete(ele.id)}>
